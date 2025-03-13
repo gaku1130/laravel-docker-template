@@ -1,8 +1,10 @@
 <?php
 
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class TodoSeader extends Seeder
+class TodoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
