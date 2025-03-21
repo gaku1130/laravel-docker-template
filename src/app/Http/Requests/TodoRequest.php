@@ -24,6 +24,8 @@ class TodoRequest extends FormRequest
      */
     public function rules()
     {
+        // contentは何を指しているか
+        // このバリデーションはどこで行われているのか
         return [
             'content' => 'required|max:255',
         ];
@@ -31,6 +33,8 @@ class TodoRequest extends FormRequest
 
     public function messages()
     {
+                // バリデーションが行われた後にどこのページに飛ぶのか、どのようなふろーで行われているのか。
+
         return[
             'content.required' => 'ToDoが入力されていません。',
             'content.max' => 'ToDoは :max 文字以内で入力してください。',
