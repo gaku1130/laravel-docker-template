@@ -13,7 +13,7 @@
               @foreach ($todos as $todo)
                 <div class="d-flex align-items-center justify-content-between p-2 border-bottom">
                   <div>
-                    <div class="fw-bold">{{ $todo->content }}</div>
+                    <div class="fs-4 fw-bold text-dark mb-1">{{ $todo->content }}</div>
                     @if($todo->category)
                       <span class="badge bg-light text-dark border border-primary mt-1">{{ $todo->category }}</span>
                     @endif
