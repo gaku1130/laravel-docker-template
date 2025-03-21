@@ -33,7 +33,7 @@ class TodoRequest extends FormRequest
 
     public function messages()
     {
-                // バリデーションが行われた後にどこのページに飛ぶのか、どのようなふろーで行われているのか。
+        // バリデーションが行われた後にどこのページに飛ぶのか、どのようなふろーで行われているのか。
 
         return[
             'content.required' => 'ToDoが入力されていません。',

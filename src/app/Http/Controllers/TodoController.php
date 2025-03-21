@@ -22,8 +22,8 @@ class TodoController extends Controller
         // Illuminate\Database\Eloquent\Collection　コレクションオブジェクトが入ってる。
         // コレクションのメソッドを使ってみる。配列操作が出来る。
         // todoモデルの中でIDが1のものだけ取り出すメソッドを探す。
-        $todos = $this->todo->all();
         // $todos = todosテーブルの内容が全て入っている
+        $todos = $this->todo->all();
         
         return view('todo.index', ['todos' => $todos]); 
     }
