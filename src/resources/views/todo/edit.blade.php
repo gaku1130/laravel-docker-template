@@ -17,6 +17,15 @@
                 @endif
             </div>
         </div>
+        <div class="form-group row mt-3">
+            <label for="category" class="col-md-4 col-form-label text-md-right">カテゴリー</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control @if($errors->has('category')) border-danger @endif" name="category" value="{{ old('category', $todo->category) }}">
+                @if($errors->has('category'))
+                <span class="text-danger">{{ $errors->first('category') }}</span>
+                @endif
+            </div>
+        </div>
         <div class="form-group row mb-0">
             <div class="col-md-6 offset-md-4">
             <button type="submit" class="btn btn-primary">更新</button>

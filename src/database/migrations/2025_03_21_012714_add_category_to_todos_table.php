@@ -14,7 +14,7 @@ class AddCategoryToTodosTable extends Migration
     public function up()
     {
         Schema::table('todos', function (Blueprint $table) {
-            //
+            $table->string('category')->nullable()->after('content');
         });
     }
 
@@ -26,7 +26,7 @@ class AddCategoryToTodosTable extends Migration
     public function down()
     {
         Schema::table('todos', function (Blueprint $table) {
-            //
+            $table->dropColumn('category');
         });
     }
 }

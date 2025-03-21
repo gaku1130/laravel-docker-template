@@ -8,6 +8,7 @@
     </div>
     <div class="card-body">
         <h5 class="card-title">{{ $todo->content }}</h5>
+        <p>カテゴリー：{{ $todo->category }}</p>
         <p class="card-text">作成日時：{{ $todo->created_at }}</p>
     </div>
     <div class="row">

@@ -26,6 +26,7 @@ class TodoRequest extends FormRequest
     {
         return [
             'content' => 'required|max:255',
+            'category' => 'nullable|string|max:20',
         ];
     }
 
