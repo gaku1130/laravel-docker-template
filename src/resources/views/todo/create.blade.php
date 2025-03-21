@@ -19,7 +19,12 @@
                 <div class="form-group row mt-3">
                     <label for="category" class="col-md-4 col-form-label text-md-right">カテゴリー</label>
                     <div class="col-md-6">
-                    <input type="text" class="form-control @if($errors->has('category')) border-danger @endif" name="category" value="{{ old('category', $todo->category ?? '') }}">
+                        <select name="category" class="form-control @if($errors->has('category')) border-danger @endif">
+                            <option value="">選択してください</option>
+                            @foreach (['MUST', '自習', 'レビュー', 'プライベート', 'その他'] as $value)
+                                <option value="{{ $value }}" @if(old('category') == $value) selected @endif>{{ $value }}</option>
+                            @endforeach
+                        </select>
                         @if($errors->has('category'))
                         <span class="text-danger">{{ $errors->first('category') }}</span>
                         @endif

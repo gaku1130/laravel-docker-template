@@ -26,7 +26,7 @@ class TodoRequest extends FormRequest
     {
         return [
             'content' => 'required|max:255',
-            'category' => 'nullable|string|max:20',
+            'category' => 'required|in:MUST,自習,レビュー,プライベート,その他',
         ];
     }
 
@@ -35,6 +35,8 @@ class TodoRequest extends FormRequest
         return[
             'content.required' => 'ToDoが入力されていません。',
             'content.max' => 'ToDoは :max 文字以内で入力してください。',
+            'category.required' => 'カテゴリーを選択してください。',
+            'category.in' => '有効なカテゴリーを選択してください。',
         ];
     }
 }
